@@ -1,0 +1,2006 @@
+<!dogtype html>
+<html>
+
+<head>
+ <title>dress</title>
+    <link rel="stylesheet" href="hager.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" >
+<style>
+    body{
+        background-color:white;
+        
+    }
+    .navbar{
+    background: rgba(0,0,0,0.5);;
+    padding: 10px 10px;
+   
+
+
+    transition: all 1s ease;   
+}
+.navbar_background{
+    
+    padding: 5px 20px;
+}
+.navbar-brand{
+    font-size: 40px ;
+    color:white;
+}
+.nav-link{
+    color: white;
+    font-size: 25px;
+    margin: 5px;
+    text-decoration: none;
+    
+}
+.nav-link:hover{
+    color: red;
+}
+.nav-btn{
+    background: transparent;
+    color: white;
+    font-size: 23;
+     transition: all 1s ease;  
+    border: 2px solid white ; 
+}
+.nav-btn:hover{ 
+    color: white;
+     border: 2px solid red ;
+    transform: rotate(15deg);
+}
+.toggler-btn{
+    border:2px solid red; 
+    padding: 7px;
+     transition: all 2s ease;
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: red;
+    
+     transition: all 0.5s ease;
+
+  }
+.change .bar1{
+    
+    transform: rotate(-45deg)translate(-5px,6px);   
+}
+.change .bar2{
+    
+    opacity: 0;    
+}
+.change .bar3{
+    
+    transform: rotate(45deg)translate(-5px,-8px);   
+}
+
+    h1{
+        text-align: center;
+        font-size: px;
+        color:darkred;
+        text-shadow: 10px 10px 10px black;
+   
+    }
+    .had{
+      margin-left: 30px;
+     
+        width: 500;
+        height: 700;
+        margin-top: 20px;
+        margin-bottom: 20px;
+         box-shadow: 10px 10px 10px black;
+        box-shadow: -10px -10px 10px black;
+    }
+    .had:hover{
+        box-shadow: 10px 10px 10px white;
+        box-shadow: -10px -10px 10px white;
+    }
+  
+    .team-area{
+        padding: 60px 0x;
+        
+    }
+    .card{
+      border: none;
+       
+      
+        background-color:white;
+       
+    }
+    .img-area{
+     
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+    }
+    .team-single:hover .side-two{
+        transform: rotateY(0deg); 
+    }
+    .team-single:hover .side-one{
+        transform: rotateY(180deg);  
+    }
+    .content-area{
+        transform: perspective(1000px);
+        transition: 1s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    .side-one{
+        position:relative;
+       transform: rotateY(0deg);
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+    .side-two{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color:white;
+        transform: rotateY(-180deg)
+        
+    }
+    
+    .side-one,
+    .side-two{
+        backface-visibility: hidden;
+         transition: 1s;
+       
+        transform-style: preserve-3d;
+    }
+    .side-one .card,
+    .side-two .card{
+        min-height: 300px;
+        min-width: 300px;
+    }
+    .overly{
+        text-align:left;
+        margin-left: 80;
+        background-color:white;
+    }
+    .product-bottom{
+          text-align:left;
+        margin-left: 80;
+    }
+    
+   .product-bottom .fa{
+      
+            color: gold;
+            font-size: 15px;
+        }
+        .product-bottom h3{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .product-bottom h5{
+            font-size: 15px;
+            padding-bottom: 10px;
+            font-weight: bold;
+            color: green;
+        }
+  .site-footer
+{
+   background: linear-gradient(to bottom,grey,transparent);
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+    
+}
+.site-footer hr
+{
+  border-top-color:black;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:darkblue;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d;
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:green
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+ 
+ 
+
+</style>
+
+</head>
+
+
+<body>
+     <nav class="navbar navbar-expand-lg">
+             <a href="#"class="navbar-brand text-uppercase primary-color">fashion</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <div class="toggler-btn">
+                
+                <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+                </div>
+     
+            </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+             
+         <ul class="navbar-nav mx-auto">
+            
+            <li class="nav-item">
+                <a href="index.html" class="nav-link text-capitalize">HOME</a> 
+             </li>
+             <li class="nav-item">
+                <a href="dress.html" class="nav-link text-capitalize">dress</a> 
+             </li>
+             <li class="nav-item">
+                <a href="jeans.html" class="nav-link text-capitalize">jeans</a> 
+             </li>
+             <li class="nav-item">
+                <a href="bag.html" class="nav-link text-capitalize">bags</a> 
+             </li>
+           
+             <li class="nav-item">
+                <a href="scarf.html" class="nav-link text-capitalize">scarf</a> 
+             </li>
+                <li class="nav-item">
+                <a href="shoes.html" class="nav-link text-capitalize">shose</a> 
+             </li>
+                <li class="nav-item">
+                     <li class="nav-item">
+                <a href="clothing.html" class="nav-link text-capitalize">clothes</a> 
+             </li>
+             <li class="nav-item">
+                <a href="best%20sale.html" class="nav-link text-capitalize">bestsale</a> 
+             </li>
+                <li class="nav-item">
+                <a href="blog.html" class="nav-link text-capitalize">blog</a> 
+             </li>
+                   <li class="nav-item">
+                <a href="About%20us.html" class="nav-link text-capitalize">contactus</a> 
+             </li>
+             </ul>    
+         
+             
+             
+        <form class="form-inline d-none d-lg-block mr-5" >
+        <a href="payment.html"   > <button class="btn nav-btn text-capitalize" type="button" >SHOPE NOW </button> </a>   
+            </form>     
+             
+             
+             
+             </div>
+            
+            
+            
+        </nav>
+    <div class="team-area">
+    
+    <div class="container">
+              <h1 class="ww">DRESS-WHAT IS NEW </h1>
+  
+         <div class="row">
+             
+    <img  class="had" src="product_163644.jpg">
+             <img class="had"  src="product_161094.jpg">
+      
+       
+   
+        
+        <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="3 (2).jpg" width="250" height="250">
+                        
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="2 (1).jpg" width="250" height="250">
+                         
+                         </div>         
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+            <div class="overly">
+                <a href="#"> <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button></a>
+                <a href="#"> <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button></a>
+                <a href="#"> <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button> </a>  
+                </div>
+             <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+            </div>
+            
+                    <div class=" col-xs-8 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="1 (5).jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="4 (2).jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                <div class="overly">
+                   
+                        <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                   
+                </div>    
+                <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+        
+                    <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="4 (1).jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="3 (1).jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                </div>
+               
+                </div>
+            </div>
+                <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>        
+                 <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+            </div>  
+              <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="treee.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="product_164246.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+              <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="1 (9).jpg" width="250" height="200" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="3%20(6).jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div> 
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+              <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="1 (8).jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="3 (5).jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+                  <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="1 (7).jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="2 (4).jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                <h3>dress</h3>
+                <h5>$46</h5>
+            
+            </div>
+        </div>
+                   <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="1 (6).jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="3 (4).jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+                   <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="1 (10).jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="8.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+               <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="10.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="9.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+               <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="7.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="6.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+            <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="123.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="456.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+            <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="ff.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="xx.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+            <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="t.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="c.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+             <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="i.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="h.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+             <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="o.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="p.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+             <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="m.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="k.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+             <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="zz.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="ss.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+             <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="tt.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="uu.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+             <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="aa.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="dd.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+           <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="jj.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="kk.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+            </div>
+        </div>
+             <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="ee.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="rr.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="ww.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="qq.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="nn.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="mm.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="ll.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="tr.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="pp.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="oo.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="re.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="er.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="3 (3).jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="1 (4).jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="d.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="a.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="hjh.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="vg.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="item_XXL_11096246_15282175.jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="item_XXL_11096246_15282177.jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                         <div class=" col-xs-12 col-sm-6 col-md-3">
+             <div class="team-single">
+            <div class="content-area">
+                 <div class="side-one">
+                
+                <div class="card">
+                     
+                     <div class="card-body text-center">
+                    <div class="img-area">
+                    <img src="1 (11).jpg" width="250" height="250" >
+                         </div>
+                    </div>
+                     
+                     </div>
+                </div>
+                 
+                 
+            <div class="side-two">
+              <div class="card">
+                     
+                     <div class="card-body text-center "> 
+                        <div class="img-area"> 
+                        <img src="4 (3).jpg" width="250" height="250">
+                         </div>
+                  </div>
+                </div>
+                 </div>
+            </div>
+            
+            </div>
+                  
+                  <div class="overly">
+                <button type="button" class="btn btn-secondary" title="add to website"><i class="fa fa-eye"></i></button>
+                <button type="button" class="btn btn-secondary" title="quick shopping"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class="btn btn-secondary" title="add to card"><i class="fa fa-shopping-cart"></i></button>   
+                </div>
+                  <div class="product-bottom">
+                <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star"></li>
+                 <li class="fa fa-star-half-o"></li>
+                 <li class="fa fa-star-o"></li>
+                <h3>dress</h3>
+                <h5>$456</h5>
+            
+                 </div>
+             </div> 
+                    
+        </div>
+        </div>
+    </div>
+       <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Etiam nulla nunc, aliquet vel metus nec, scelerisque tempus enim. Sed eget blandit lectus. Donec facilisis ornare turpis id pretium. Maecenas scelerisque interdum dolor in vestibulum. Proin euismod dui purus, non lacinia ligula luctus aIn volutpat cursus quam, a blandit neque accumsan vitae. Maecenas scelerisque interdum dolor in vestibulum..</p>
+          </div>
+
+          <div class="col-xs-6 col-md-2">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="dress.html">dress</a></li>
+             
+              <li><a href="blog.html">blog</a></li>
+              <li><a href="jeans.html">jeans</a></li>
+              <li><a href="shoes.html">shose</a></li>
+              <li><a href="best sale.html">best sale</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-2">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="privacy poilcy.html">Privacy Policy</a></li>
+              <li><a href="About%20us.html">About Us</a></li>
+              <li><a href="payment.html">payment</a></li>
+              <li><a href="buynow.html">Buy now</a></li>
+              <li><a href="map.html">Sitemap</a></li>
+            </ul>
+          </div>
+              <div class="col-xs-6 col-md-2">
+                   <h6>Categories</h6>
+          <ul class="footer-links">
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="clothing.html">Top</a></li>
+              <li><a href="scarf.html">scarf</a></li>
+              <li><a href="praying set.html">Praying set</a></li>
+              
+              <li><a href="clothing.html">T-shirt</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">© 2018 All Rights Reserved. Designed by 
+         <a href="#">Newyork </a>.
+            </p>
+          </div>
+
+         
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-whatsapp"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+</body>
+</html>

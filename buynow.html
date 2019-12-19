@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" >
+    <style>
+        
+.navbar{
+    background-color: white;
+    padding: 10px 10px;
+   
+
+
+    transition: all 1s ease;   
+}
+.navbar_background{
+    
+    padding: 5px 20px;
+}
+.navbar-brand{
+    font-size: 40px;
+}
+.nav-link{
+    color: green;
+    font-size: 25px;
+    margin: 5px;
+    text-decoration: none;
+    transition: all 1s ease; 
+    
+}
+.nav-link:hover{
+    color: black;
+}
+.nav-btn{
+    background: transparent;
+    color: firebrick;
+    font-size: 23;
+     transition: all 1s ease;  
+    border: 2px solid pink ; 
+}
+.nav-btn:hover{
+    color: black;
+     border: 2px solid burlywood ;
+    transform: rotate(15deg);
+}
+.toggler-btn{
+    border:2px solid burlywood; 
+    padding: 7px;
+     transition: all 2s ease;
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color: burlywood;
+    
+     transition: all 0.5s ease;
+
+  }
+.change .bar1{
+    
+    transform: rotate(-45deg)translate(-5px,6px);   
+}
+.change .bar2{
+    
+    opacity: 0;    
+}
+.change .bar3{
+    
+    transform: rotate(45deg)translate(-5px,-8px);   
+}
+         .row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; 
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; 
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; 
+  flex: 50%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 10px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+}
+
+input[type=text] {
+  width: 25%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: forestgreen ;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 25%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: green ;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+          .site-footer
+{
+      background: rgba(0,0,0,0.8);
+  padding:45px 0 20px;
+  font-size:15px;
+    font-family: serif;
+  line-height:24px;
+  color:#737373;
+    
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.whatsapp:hover
+{
+  background-color:green;
+}
+.social-icons a.instagram:hover
+{
+  background-color:purple
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+        
+        
+    </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+             <a href="#"class="navbar-brand text-uppercase primary-color">fashion</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <div class="toggler-btn">
+                
+                <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+                </div>
+     
+            </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+             
+         <ul class="navbar-nav mx-auto">
+            
+            <li class="nav-item">
+                <a href="index.html" class="nav-link text-capitalize">HOME</a> 
+             </li>
+             <li class="nav-item">
+                <a href="dress.html" class="nav-link text-capitalize">dress</a> 
+             </li>
+             <li class="nav-item">
+                <a href="jeans.html" class="nav-link text-capitalize">jeans</a> 
+             </li>
+             <li class="nav-item">
+                <a href="bag.html" class="nav-link text-capitalize">bags</a> 
+             </li>
+           
+             <li class="nav-item">
+                <a href="scarf.html" class="nav-link text-capitalize">scarf</a> 
+             </li>
+                <li class="nav-item">
+                <a href="shoes.html" class="nav-link text-capitalize">shose</a> 
+             </li>
+                <li class="nav-item">
+                     <li class="nav-item">
+                <a href="clothing.html" class="nav-link text-capitalize">clothes</a> 
+             </li>
+             <li class="nav-item">
+                <a href="best%20sale.html" class="nav-link text-capitalize">bestsale</a> 
+             </li>
+                <li class="nav-item">
+                <a href="blog.html" class="nav-link text-capitalize">blog</a> 
+             </li>
+                   <li class="nav-item">
+                <a href="About%20us.html" class="nav-link text-capitalize">contactus</a> 
+             </li>
+             </ul>    
+         
+             
+             
+        <form class="form-inline d-none d-lg-block mr-5" >
+        <a href="payment.html"   > <button class="btn nav-btn text-capitalize" type="button" >SHOPE NOW </button> </a>   
+            </form>     
+             
+             
+             
+             </div>
+            
+            
+            
+        </nav>
+       <div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Buy Now </h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" >
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" >
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" >
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" >
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" >
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" >
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" >
+
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" >
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+
+  
+        
+        </div>
+            <br><br>
+        <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Etiam nulla nunc, aliquet vel metus nec, scelerisque tempus enim. Sed eget blandit lectus. Donec facilisis ornare turpis id pretium. Maecenas scelerisque interdum dolor in vestibulum. Proin euismod dui purus, non lacinia ligula luctus aIn volutpat cursus quam, a blandit neque accumsan vitae. Maecenas scelerisque interdum dolor in vestibulum..</p>
+          </div>
+
+          <div class="col-xs-6 col-md-2">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="dress.html">dress</a></li>
+             
+              <li><a href="blog.html">blog</a></li>
+              <li><a href="jeans.html">jeans</a></li>
+              <li><a href="shoes.html">shose</a></li>
+              <li><a href="best sale.html">best sale</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-2">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="privacy poilcy.html">Privacy Policy</a></li>
+              <li><a href="About%20us.html">About Us</a></li>
+              <li><a href="payment.html">payment</a></li>
+              <li><a href="buynow.html">Buy now</a></li>
+              <li><a href="map.html">Sitemap</a></li>
+            </ul>
+          </div>
+              <div class="col-xs-6 col-md-2">
+                   <h6>Categories</h6>
+          <ul class="footer-links">
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="clothing.html">Top</a></li>
+              <li><a href="scarf.html">scarf</a></li>
+              <li><a href="praying set.html">Praying set</a></li>
+              
+              <li><a href="clothing.html">T-shirt</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">© 2018 All Rights Reserved. Designed by 
+         <a href="#">Newyork </a>.
+            </p>
+          </div>
+
+           <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-whatsapp"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+ 
+</body>
+</html>   
+        
+        
+        
+        
+        
+        
+        
+        

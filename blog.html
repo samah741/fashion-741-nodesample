@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset = "utf-8">
+<title>blog page</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" >
+    <style>
+        body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+    .navbar{
+    background-color:gray;
+    padding: 10px 10px;
+   
+    transition: all 1s ease;   
+}
+.navbar_background{
+    
+    padding: 5px 20px;
+}
+    
+.navbar-brand{
+    font-size: 40px ;
+    font-family:fantasy;
+    color:bisque;
+    text-shadow: 5px 3px 10px white;
+    
+}
+    .navbar-brand:hover{
+        color: bisque;
+        
+    }
+.nav-link{
+    color: bisque;
+    font-size: 25px;
+    margin: 5px;
+    text-decoration: none;
+        font-family:fantasy;
+    
+}
+.nav-link:hover{
+    color: white;
+}
+.nav-btn{
+    background: transparent;
+    color: bisque;
+    font-size: 23;
+     transition: all 1s ease;  
+    border: 2px solid whitesmoke ; 
+}
+.nav-btn:hover{ 
+    color: white;
+     border: 2px solid bisque ;
+    transform: rotate(15deg);
+}
+.toggler-btn{
+    border:2px solid bisque ; 
+    padding: 7px;
+     transition: all 2s ease;
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background-color:bisque;
+    
+     transition: all 0.5s ease;
+
+  }
+.change .bar1{
+    
+    transform: rotate(-45deg)translate(-5px,6px);   
+}
+.change .bar2{
+    
+    opacity: 0;    
+}
+.change .bar3{
+    
+    transform: rotate(45deg)translate(-5px,-8px);   
+    }
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+   .site-footer
+{
+   background: linear-gradient(to bottom,grey,transparent);
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+    
+}
+.site-footer hr
+{
+  border-top-color:black;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:darkblue;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d;
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:green
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+        }
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+    </style>
+</head>
+    
+<body>
+      <nav class="navbar navbar-expand-lg">
+             <a href="#"class="navbar-brand text-uppercase primary-color">fashion</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <div class="toggler-btn">
+                
+                <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+                </div>
+     
+            </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+             
+         <ul class="navbar-nav mx-auto">
+            
+            <li class="nav-item">
+                <a href="index.html" class="nav-link text-capitalize">HOME</a> 
+             </li>
+             <li class="nav-item">
+                <a href="dress.html" class="nav-link text-capitalize">dress</a> 
+             </li>
+             <li class="nav-item">
+                <a href="jeans.html" class="nav-link text-capitalize">jeans</a> 
+             </li>
+             <li class="nav-item">
+                <a href="bag.html" class="nav-link text-capitalize">bags</a> 
+             </li>
+           
+             <li class="nav-item">
+                <a href="scarf.html" class="nav-link text-capitalize">scarf</a> 
+             </li>
+                <li class="nav-item">
+                <a href="shoes.html" class="nav-link text-capitalize">shose</a> 
+             </li>
+                <li class="nav-item">
+                     <li class="nav-item">
+                <a href="clothing.html" class="nav-link text-capitalize">clothes</a> 
+             </li>
+             <li class="nav-item">
+                <a href="best%20sale.html" class="nav-link text-capitalize">bestsale</a> 
+             </li>
+                <li class="nav-item">
+                <a href="blog.html" class="nav-link text-capitalize">blog</a> 
+             </li>
+                   <li class="nav-item">
+                <a href="About%20us.html" class="nav-link text-capitalize">contactus</a> 
+             </li>
+             </ul>    
+         
+             
+             
+        <form class="form-inline d-none d-lg-block mr-5" >
+        <a href="payment.html"   > <button class="btn nav-btn text-capitalize" type="button" >SHOPE NOW </button> </a>   
+            </form>     
+             
+             
+             
+             </div>
+            
+            
+            
+        </nav>
+       <div class="header">
+  <h2> Fashion </h2>
+           <img src="oopopo.jpg" alt="fashionsta">
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>MORBI IN SEM QUIS DUI PLACERAT ORNARE</h2>
+      <h5>fashion, Dec 15, 2019</h5>
+      <div >   <img src="basantoty.jpg" alt="fashionsta" width="350" height="350"> </div>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type an​ </p>
+    </div>
+    <div class="card">
+      <h2>MORBI IN SEM QUIS DUI PLACERAT ORNARE</h2>
+      <h5> card, Sep 2, 2020 </h5>
+      <div> <img src="fish.jpg" alt="fashionsta"> </div>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type an</p>
+    </div>
+  </div>
+  
+    <div class="card">
+      <div > <img src="large1.jpg" alt="fashionsta">  </div><br>
+      <div> <img src="large2.jpg" alt="fashionsta">  </div><br>
+      <div> <img src="large3.jpg" alt="fashionsta">  </div>
+    </div>
+   
+  </div>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Etiam nulla nunc, aliquet vel metus nec, scelerisque tempus enim. Sed eget blandit lectus. Donec facilisis ornare turpis id pretium. Maecenas scelerisque interdum dolor in vestibulum. Proin euismod dui purus, non lacinia ligula luctus aIn volutpat cursus quam, a blandit neque accumsan vitae. Maecenas scelerisque interdum dolor in vestibulum..</p>
+          </div>
+
+          <div class="col-xs-6 col-md-2">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="dress.html">dress</a></li>
+             
+              <li><a href="blog.html">blog</a></li>
+              <li><a href="jeans.html">jeans</a></li>
+              <li><a href="shoes.html">shose</a></li>
+              <li><a href="best sale.html">best sale</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-2">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="privacy poilcy.html">Privacy Policy</a></li>
+              <li><a href="About%20us.html">About Us</a></li>
+              <li><a href="payment.html">payment</a></li>
+              <li><a href="buynow.html">Buy now</a></li>
+              <li><a href="map.html">Sitemap</a></li>
+            </ul>
+          </div>
+              <div class="col-xs-6 col-md-2">
+                   <h6>Categories</h6>
+          <ul class="footer-links">
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="clothing.html">Top</a></li>
+              <li><a href="scarf.html">scarf</a></li>
+              <li><a href="praying set.html">Praying set</a></li>
+              
+              <li><a href="clothing.html">T-shirt</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">© 2018 All Rights Reserved. Designed by 
+         <a href="#">Newyork </a>.
+            </p>
+          </div>
+
+         
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-whatsapp"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
+
+          
+          
+          
+</body>
+</html>
